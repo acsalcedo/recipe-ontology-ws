@@ -57,10 +57,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Includes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#List_Steps"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Step"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Is_Associated_To -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Is_Associated_To">
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Is_Prepared_By -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Is_Prepared_By">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#List_Steps"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
     </owl:ObjectProperty>
     
@@ -81,6 +99,75 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Kitchen_Tool"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Country">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Nationality"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Step"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Ingredient"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Kitchen_Tool"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Season"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Preparation_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Preparation_Time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Quantity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Ingredient"/>
+        <rdfs:range rdf:resource="&owl;real"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -123,14 +210,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Central_American_Nationality">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Nationality"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Cereal_Ingredient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Cereal_Ingredient">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Ingredient"/>
     </owl:Class>
     
 
@@ -183,6 +262,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Grain_Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Grain_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Ingredient"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday">
@@ -205,10 +292,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#List_Steps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#List_Steps"/>
+    
+
+
     <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Meat_Ingredient -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Meat_Ingredient">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Middle_Eastern_Nationality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Middle_Eastern_Nationality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Nationality"/>
     </owl:Class>
     
 
@@ -277,14 +378,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Rice_Ingredient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Rice_Ingredient">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Ingredient"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe">
@@ -313,6 +406,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spicy_Recipe">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Step">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#List_Steps"/>
     </owl:Class>
     
 
@@ -368,29 +469,588 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#American -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#American">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#North_American_Nationality"/>
+        <Country rdf:datatype="&xsd;string">United States</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Apple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Apple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fruit_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Apple</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Banana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Banana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fruit_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Banana</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Black_Bean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Black_Bean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Grain_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Black Bean</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Brazilian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Brazilian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#South_American_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Brazil</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Brown_Sugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Brown_Sugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Brown Sugar</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Butter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fat_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Butter</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Canola_Oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Canola_Oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Oil_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Canola Oil</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Caprese_Salad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Caprese_Salad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Carrot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Carrot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetable_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Carrot</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Carrot_Cake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Carrot_Cake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Celery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Celery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetable_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Celery</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Cheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Cheese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Dairy_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Cheese</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chicken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chicken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Poultry_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Chicken</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chinese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chinese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Asian_Nationality"/>
+        <Country rdf:datatype="&xsd;string">China</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chocolate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chocolate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Chocolate</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chocolate_Cake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chocolate_Cake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Christmas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Christmas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday"/>
+        <Date rdf:datatype="&xsd;dateTime">25/12</Date>
+        <Name rdf:datatype="&xsd;string">Christmas</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Colombian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Colombian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#South_American_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Colombia</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Cuban -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Cuban">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Central_American_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Cuba</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Easter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Easter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday"/>
+        <Name rdf:datatype="&xsd;string">Easter</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Egg_Sandwich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Egg_Sandwich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#English -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#English">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#European_Nationality"/>
+        <Country rdf:datatype="&xsd;string">England</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Season"/>
+        <Name rdf:datatype="&xsd;string">Fall</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Utensil_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Fork</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#French -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#French">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#European_Nationality"/>
+        <Country rdf:datatype="&xsd;string">France</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#German -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#German">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#European_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Germany</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Japanese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Japanese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Asian_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Japan</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Knife -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Knife">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Utensil_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Knife</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Lettuce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Lettuce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetable_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Lettuce</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Maple_Syrup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Maple_Syrup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Maple Syrup</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Mexican -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Mexican">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Central_American_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Mexico</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Microwave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Microwave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Electronic_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Microwave</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Milk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Milk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Dairy_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Milk</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Mixer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Mixer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Electronic_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Mixer</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#New_Years -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#New_Years">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday"/>
+        <Date rdf:datatype="&xsd;dateTime">1/1</Date>
+        <Name rdf:datatype="&xsd;string">New Year&apos;s Day</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Orange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Orange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fruit_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Orange</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Oven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Oven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Electronic_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Oven</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Meat_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Pork</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Red_Bean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Red_Bean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Grain_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Red Bean</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Red_Meat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Red_Meat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Meat_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Red Meat</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Rice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Rice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Grain_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Rice</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Saint_Valentines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Saint_Valentines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Holiday"/>
+        <Date rdf:datatype="&xsd;dateTime">14/2</Date>
+        <Name rdf:datatype="&xsd;string">Saint Valentine&apos;s Day</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fish_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Salmon</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sardine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sardine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fish_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Sardine</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#South_African -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#South_African">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#African_Nationality"/>
+        <Country rdf:datatype="&xsd;string">South Africa</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spanish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spanish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#European_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Spain</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spatula -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spatula">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Utensil_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Spatula</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Utensil_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Spoon</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Season"/>
+        <Name rdf:datatype="&xsd;string">Spring</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Sugar</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Summer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Summer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Season"/>
+        <Name rdf:datatype="&xsd;string">Summer</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetable_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Tomato</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Tuna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Tuna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fish_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Tuna</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Turkey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Turkey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Poultry_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Turkey</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Turkish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Turkish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Middle_Eastern_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Turkey</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetable_Oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetable_Oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Oil_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Vegetable_Oil</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Venezuelan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Venezuelan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#South_American_Nationality"/>
+        <Country rdf:datatype="&xsd;string">Venezuela</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Watermelon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Watermelon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fruit_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Watermelon</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Whisk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Whisk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Utensil_Kitchen_Tool"/>
+        <Name rdf:datatype="&xsd;string">Whisk</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#White_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#White_Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bread_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">White Bread</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Whole_Wheat_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Whole_Wheat_Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bread_Ingredient"/>
+        <Name rdf:datatype="&xsd;string">Whole Wheat Bread</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Winter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Winter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Season"/>
+        <Name rdf:datatype="&xsd;string">Winter</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pan_Kitchen_Tool"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pot_Kitchen_Tool"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Utensil_Kitchen_Tool"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spicy_Recipe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Recipe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegan_Recipe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetarian_Recipe"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -405,19 +1065,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bread_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Cereal_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Dairy_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fat_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fish_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fruit_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Meat_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Oil_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pasta_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Poultry_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Rice_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetable_Ingredient"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pan_Kitchen_Tool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pot_Kitchen_Tool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Utensil_Kitchen_Tool"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -428,6 +1078,16 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Nationality"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Recipe"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Season"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Spicy_Recipe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Recipe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegan_Recipe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Vegetarian_Recipe"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
