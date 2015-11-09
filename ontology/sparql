@@ -1,0 +1,20 @@
+PREFIX reci: <http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+SELECT  ?object ?predicate ?y
+WHERE {
+    reci:Arepa reci:Has ?object.
+  	?object reci:Ingredient_Name ?y
+}
+
+// Los ingredients de comidas tipicas navideñas Venezolanas
+SELECT ?name ?object ?i
+WHERE {
+  ?subject ?predicate reci:Christmas.
+  ?subject reci:Recipe_Name ?name.
+  ?subject reci:Has_Nationality reci:Venezuelan.
+  ?subject reci:Has ?object.
+  ?object reci:Ingredient_Name ?i
+}

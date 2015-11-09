@@ -384,6 +384,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Arepa">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
+        <Preparation_Time rdf:datatype="&xsd;integer">30</Preparation_Time>
         <Recipe_Name rdf:datatype="&xsd;string">Arepa</Recipe_Name>
         <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bowl"/>
         <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Corn_Flour"/>
@@ -455,6 +456,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bread">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
+        <Preparation_Time rdf:datatype="&xsd;integer">240</Preparation_Time>
         <Recipe_Name rdf:datatype="&xsd;string">Bread</Recipe_Name>
         <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bowl"/>
         <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Flour"/>
@@ -488,6 +490,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Caprese_Salad">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
+        <Preparation_Time rdf:datatype="&xsd;integer">20</Preparation_Time>
         <Recipe_Name rdf:datatype="&xsd;string">Caprese Salad</Recipe_Name>
         <Has_Nationality rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Italian"/>
         <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Knife"/>
@@ -540,6 +543,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chocolate_Covered_Strawberries">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Sweet_Recipe"/>
+        <Preparation_Time rdf:datatype="&xsd;integer">20</Preparation_Time>
         <Recipe_Name rdf:datatype="&xsd;string">Chocolate Covered Strawberries</Recipe_Name>
         <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bowl"/>
         <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chocolate"/>
@@ -617,6 +621,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fettuccine_Alfredo">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
+        <Preparation_Time rdf:datatype="&xsd;integer">60</Preparation_Time>
         <Recipe_Name rdf:datatype="&xsd;string">Fettuccine Alfredo</Recipe_Name>
         <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bowl"/>
         <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Butter"/>
@@ -664,6 +669,28 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#German">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Nationality"/>
         <Country rdf:datatype="&xsd;string">Germany</Country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Hallaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Hallaca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
+        <Preparation_Time rdf:datatype="&xsd;integer">300</Preparation_Time>
+        <Recipe_Name rdf:datatype="&xsd;string">Hallaca</Recipe_Name>
+        <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Bowl"/>
+        <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Chicken"/>
+        <Is_Associated_To rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Christmas"/>
+        <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Corn_Flour"/>
+        <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Fork"/>
+        <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Knife"/>
+        <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Olive_Oil"/>
+        <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pork"/>
+        <Uses rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pot"/>
+        <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Red_Meat"/>
+        <Has_Nationality rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Venezuelan"/>
+        <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Water"/>
     </owl:NamedIndividual>
     
 
@@ -825,6 +852,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Pesto">
         <rdf:type rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Savory_Recipe"/>
+        <Preparation_Time rdf:datatype="&xsd;integer">25</Preparation_Time>
         <Recipe_Name rdf:datatype="&xsd;string">Pesto</Recipe_Name>
         <Has rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Basil"/>
         <Has_Nationality rdf:resource="http://www.semanticweb.org/andrea/ontologies/2015/10/recipes#Italian"/>
