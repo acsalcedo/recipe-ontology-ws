@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Recipe Ontology</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        .navbar-default {
+            background-color: #F8F8F8;
+            border-color: #E7E7E7;
+        }
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+    			<div class="navbar-header"></div>
+                <div id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/query1">Query 1</a></li>
+                        <li><a href="/query2">Query 2</a></li>
+                        <li><a href="/query3">Query 3</a></li>
+                        <li><a href="/queries">All Queries</a></li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="container">
+            <br><br><br>
+            {{ query_content | safe }}
+        </div>
+    </body>
+</html>
